@@ -1,0 +1,246 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Variables*/
+:root {
+	--main-color: rgba(50,82,123,1);
+	--secondary-color: rgba(254,246,158,1);
+	--page-padding: 5vw;
+	--main-font: Sora, Tahoma;
+	--secondary-font: Roboto, Helvetica;
+}
+
+/*Global Styles*/
+body {
+	margin: 0;
+	font-family: var(--secondary-font);
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:visited {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+select, input[type="text"], input[type="email"] {
+	border: none;
+}
+
+select:focus {
+	outline: none;
+}
+
+input[type="date"], input[type="time"] {
+	border: none;
+}
+
+input[type="date"]:focus {
+	outline: none;
+}
+
+input[type="time"]:focus {
+	outline: none;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
+
+input[type="email"]:focus {
+	outline: none;
+}
+
+/*Custom Styles*/
+.main-section {
+	background-image: url("./assets/hero.jpg");
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	background-position: center;
+	height: 100vh;
+	min-height: 500px;
+}
+
+.nav-bar {
+	position: relative;
+	padding: 25px var(--page-padding);
+	color: black;
+	display: flex;
+	z-index: 999;
+}
+
+.nav-bar .logo {
+	font-family: var(--main-font);
+	font-weight: 500;
+	font-size: 35px;
+	/*color: var(--main-color);*/
+}
+
+.nav-bar #hamburger {
+	display: none;
+	margin: auto 0px auto auto;
+	font-size: 25px;
+}
+
+.nav-bar .nav-items {
+	margin-left: auto;
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.nav-bar .nav-items .nav-item a {
+	transition: 0.5s;
+	position: relative;
+}
+
+.nav-bar .nav-items .nav-item a:after {
+	position: absolute;
+	content: "";
+	background-color: var(--main-color);
+	width: 0%;
+	height: 3px;
+	right: 0;
+	bottom: -3;
+	transition: 0.25s ease-out;
+	border-radius: 10px;
+}
+
+.nav-bar .nav-items .nav-item a:hover:after {
+	width: 50%;
+}
+
+.nav-bar .nav-items .services-dropdown {
+}
+
+.nav-bar .nav-items .services-dropdown .dropdown-content {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+
+.nav-bar .nav-items .services-dropdown .dropdown-content span {
+	transition: 0.5s;
+	padding-top: 10px;
+}
+
+.nav-bar .nav-items .services-dropdown:hover .dropdown-content {
+	display: flex;
+
+}
+
+.nav-bar .nav-items .partner-dropdown {
+}
+
+.nav-bar .nav-items .partner-dropdown .dropdown-content {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+
+.nav-bar .nav-items .partner-dropdown .dropdown-content span {
+	transition: 0.5s;
+	padding-top: 10px;
+}
+
+.nav-bar .nav-items .partner-dropdown:hover .dropdown-content {
+	display: flex;
+}
+
+
+.footer {
+	display: flex;
+	background-color: black;
+	color: white;
+	padding: 50px var(--page-padding);
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer .social-links {
+}
+
+.footer .social-links .links {
+	display: flex;
+	gap: 10px;
+}
+
+.footer .title {
+}
+
+.footer .title h1 {
+	margin: 0;
+	font-weight: 500;
+	font-family: var(--main-font);
+}
+
+.footer .copyright {
+
+}
+
+/*Media Query*/
+@media (max-width: 1000px) {
+	.nav-bar #hamburger {
+		display: block;
+	}
+	.nav-bar .nav-items {
+		display: none;
+	}
+	
+	.nav-bar .responsive {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		gap: 20px;
+		width: 100%;
+		left: 0;
+		top: 75px;
+		background-color: white;
+		padding: 50px 0px;
+		z-index: 999;
+	}
+	
+	.nav-bar .responsive .nav-item {
+		text-align: center;
+		display: block;
+		position: relative;
+		margin: auto;
+		
+	}
+	
+	.nav-bar .responsive .nav-item a {
+		border-bottom: 1px solid rgba(125,125,125,0.5);
+	}
+	
+	.nav-bar .responsive .dropdown-content {
+		position: relative !important;
+		padding: 0;
+		display: flex;
+		flex-direction: row !important;
+		gap: 10px;
+		background: none;
+	}
+	
+	.nav-bar .responsive .dropdown-content span {
+		position: relative;
+	
+	}
+}

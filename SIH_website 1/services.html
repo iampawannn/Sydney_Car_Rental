@@ -1,0 +1,164 @@
+<html>
+<head>
+	<title>SCR - Services</title>
+	<link rel="stylesheet" href="global-styles.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.services {
+			padding: 100px var(--page-padding);
+			display: flex;
+			gap: 50px;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
+
+		.services a {
+			transition: 0.5s ease-in-out;
+		}
+
+		.services a:hover {
+			transform: scale(1.1,1.1);
+			box-shadow: 0px 0px 50px 5px rgba(128,128,128,0.8);
+			border-radius: 25px;
+		}
+
+		.services .service {
+			color: white;
+			position: relative;
+			background-image: url("./assets/about1.jpg");
+			background-size: cover;
+			height: 400px;
+			width: 400px;
+			border-radius: 25px;
+			overflow: hidden;
+		}
+
+		.services .service1 {
+			background-image: url("./assets/services1.jpg")
+		}
+
+		.services .service2 {
+			background-image: url("./assets/services2.jpg")
+		}
+
+		.services .service3 {
+			background-image: url("./assets/services3.jpg")
+		}
+
+		.services .service4 {
+			background-image: url("./assets/services4.jpg")
+		}
+
+		.services .service5 {
+			background-image: url("./assets/services5.jpg")
+		}
+
+
+		.services .service .bottom-container {
+			position: absolute;
+			width: 100%;
+			background-color: black;
+			bottom: 0;
+			box-shadow: 0px -20px 50px 50px black;
+			border-radius: 0px 0px 25px 25px;
+			padding: 25px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="nav-bar">
+		<span class="logo nav-item"><a href="index.html">SCR</a></span>
+		<div id="nav-items" class="nav-items">
+			<span class="nav-item"><a href="about.html">About Us</a></span>
+			<div class="services-dropdown">
+				<span class="nav-item"><a href="services.html">Services</a></span>
+				<div class="dropdown-content">
+					<span class="nav-item"><a href="vehicle.html">Vehicle</a></span>
+					<span class="nav-item"><a href="deals.html">Deals</a></span>
+					<span class="nav-item"><a href="locations.html">Locations</a></span>
+					<span class="nav-item"><a href="insurance.html">Insurance</a></span>
+					<span class="nav-item"><a href="reservation.html">Reservation</a></span>
+				</div>
+			</div>
+			<span class="nav-item"><a href="gallery.html">Project Gallery</a></span>
+			<div class="partner-dropdown">
+				<span class="nav-item"><a href="partner.html">Partner</a></span>
+				<div class="dropdown-content">
+					<span class="nav-item"><a href="testimonial.html">Partner Testimonial</a></span>
+				</div>
+			</div>
+			<span class="nav-item"><a href="contact.html">Contact</a></span>
+			<span class="nav-item"><a href="career.html">Career</a></span>
+			<span class="nav-item"><a href="reference.html">Reference</a></span>
+		</div>
+		<a id="hamburger" href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
+	
+	<div class="services">
+		<a href="vehicle.html">
+			<div class="service service1">
+				<div class="bottom-container">
+					<h3>Vehicle</h3>
+					<p>See our vehicles available for renting.</p>
+				</div>
+			</div>
+		</a>
+		<a href="deals.html">
+			<div class="service service2">
+				<div class="bottom-container">
+					<h3>Deals</h3>
+					<p>Our latest deals for our customers.</p>
+				</div>
+			</div>
+		</a>
+		<a href="locations.html">
+			<div class="service service3">
+				<div class="bottom-container">
+					<h3>Locations</h3>
+					<p>Find rentals near you.</p>
+				</div>
+			</div>
+		</a>
+		<a href="insurance.html">
+			<div class="service service4">
+				<div class="bottom-container">
+					<h3>Insurance</h3>
+					<p>Insurance plans.</p>
+				</div>
+			</div>
+		</a>
+		<a href="reservation.html">
+			<div class="service service5">
+				<div class="bottom-container">
+					<h3>Reservation</h3>
+					<p>Have plans? Reserve.</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	
+	<footer class="footer">
+		<div class="social-links">
+			<div class="links">
+				<a href="#"><i class="fa fa-facebook-square" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-twitter-square" style="color: white;"></i></a>
+			</div>
+		</div>
+		<div class="title">
+			<h1>SCR</h1>
+		</div>
+		<div class="copyright">
+			<span>© <script>document.write(new Date().getFullYear())</script></span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="scripts.js"></script>  
+</body>
+</html>
+
+
+<!--
+*Sources*
+-->

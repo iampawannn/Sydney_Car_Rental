@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title>SCR - Reservation</title>
+	<link rel="stylesheet" href="global-styles.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.reservation {
+			padding: 0px var(--page-padding);
+			display: flex;
+			flex-direction: column;
+			height: 70vh;
+			padding-top: 10vh;
+			min-height: 350px;
+			background-image: url("./assets/reservation1.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.reservation .reservation-bottom-section {
+			margin: auto;
+		}
+
+		.reservation .reservation-bottom-section .booking-section {
+			background-color: white;
+			width: 100%;
+			border-radius: 15px;
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+			padding: 15px;
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form .line {
+			border: 1px solid rgba(200,200,200,0.5);
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form .form-container {
+			display: flex;
+			flex-direction: column;
+			width: 250px;
+			padding: 10px;
+			justify-content: space-around;
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form .form-container label {
+			font-size: 12px;
+			color: grey;
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form .submit {
+			background-color: var(--secondary-color);
+			border-radius: 5px;
+			padding: 25px;
+			transition: 0.5s;
+			font-size: 1vw;
+		}
+
+		.reservation .reservation-bottom-section .booking-section .booking-form .submit:hover {
+			opacity: 0.8;
+		}
+	</style>
+</head>
+<body>
+	<nav class="nav-bar">
+		<span class="logo nav-item"><a href="index.html">SCR</a></span>
+		<div id="nav-items" class="nav-items">
+			<span class="nav-item"><a href="about.html">About Us</a></span>
+			<div class="services-dropdown">
+				<span class="nav-item"><a href="services.html">Services</a></span>
+				<div class="dropdown-content">
+					<span class="nav-item"><a href="vehicle.html">Vehicle</a></span>
+					<span class="nav-item"><a href="deals.html">Deals</a></span>
+					<span class="nav-item"><a href="locations.html">Locations</a></span>
+					<span class="nav-item"><a href="insurance.html">Insurance</a></span>
+					<span class="nav-item"><a href="reservation.html">Reservation</a></span>
+				</div>
+			</div>
+			<span class="nav-item"><a href="gallery.html">Project Gallery</a></span>
+			<div class="partner-dropdown">
+				<span class="nav-item"><a href="partner.html">Partner</a></span>
+				<div class="dropdown-content">
+					<span class="nav-item"><a href="testimonial.html">Partner Testimonial</a></span>
+				</div>
+			</div>
+			<span class="nav-item"><a href="contact.html">Contact</a></span>
+			<span class="nav-item"><a href="career.html">Career</a></span>
+			<span class="nav-item"><a href="reference.html">Reference</a></span>
+		</div>
+		<a id="hamburger" href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
+	
+	<div class="reservation">
+		<div class="reservation-bottom-section">
+			<div class="booking-section">
+				<form class="booking-form">
+					<div class="branch-container form-container">
+						<label for="branch">Branch</label>
+						<select name="branch" id="branch">
+							<option value="Sydney">Sydney</option>
+							<option value="Melbourne" selected>Melbourne</option>
+							<option value="Brisbane">Brisbane</option>
+							<option value="Canberra">Canberra</option>
+						</select>
+					</div>
+					<div class="line"></div>
+					<div class="branch-container form-container">
+						<label for="car">Car</label>
+						<select name="car" id="car">
+							<option value="Vios">Vios</option>
+							<option value="Fortuner" selected>Fortuner</option>
+							<option value="Hilux">Hilux</option>
+							<option value="StargazerX">Stargazer X</option>
+						</select>
+					</div>
+					<div class="line"></div>
+					<div class="date-container form-container">
+						<label for="date">Date</label>
+						<input type="date" required/>
+					</div>
+					<div class="line"></div>
+					<div class="time-container form-container">
+						<label for="time">Time</label>
+						<input type="time" required/>
+					</div>
+					<input class="submit" type="submit" value="Reserve" onClick="(() => {prompt('Input your username', 'John Doe');})()"/>
+			</div>
+		</div>
+	</div>
+	
+	
+	<footer class="footer">
+		<div class="social-links">
+			<div class="links">
+				<a href="#"><i class="fa fa-facebook-square" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-twitter-square" style="color: white;"></i></a>
+			</div>
+		</div>
+		<div class="title">
+			<h1>SCR</h1>
+		</div>
+		<div class="copyright">
+			<span>© <script>document.write(new Date().getFullYear())</script></span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="scripts.js"></script>  
+</body>
+</html>
+
+
+<!--
+*Sources*
+-->

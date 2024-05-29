@@ -1,0 +1,200 @@
+<html>
+<head>
+	<title>SCR - Home</title>
+	<link rel="stylesheet" href="global-styles.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.hero-section {
+			padding: 0px var(--page-padding);
+			display: flex;
+			flex-direction: column;
+			height: 70vh;
+			padding-top: 10vh;
+			min-height: 350px;
+		}
+
+		.hero-section .hero-top-section {
+			display: flex;
+		}
+
+		.hero-section .hero-top-section .title-section {
+		}
+
+		.hero-section .hero-top-section .title-section h1 {
+			font-family: var(--secondary-font);
+			font-size: 5vw;
+			color: rgba(255,255,255,0.9);
+			margin: 0px 0px 10vh 0px;
+		}
+
+		.hero-section .hero-top-section .title-section .rent-button {
+			background-color: var(--secondary-color);
+			padding: 10px 25px;
+			border-radius: 25px;
+			transition: 0.5s;
+		}
+
+		.hero-section .hero-top-section .title-section .rent-button:hover {
+			opacity: 0.8;
+		}
+
+		.hero-section .hero-bottom-section {
+			margin-top: auto;
+		}
+
+		.hero-section .hero-bottom-section .booking-section {
+			background-color: white;
+			width: 100%;
+			border-radius: 15px;
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+			padding: 15px;
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form .line {
+			border: 1px solid rgba(200,200,200,0.5);
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form .form-container {
+			display: flex;
+			flex-direction: column;
+			width: 250px;
+			padding: 10px;
+			justify-content: space-around;
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form .form-container label {
+			font-size: 12px;
+			color: grey;
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form .submit {
+			background-color: var(--secondary-color);
+			border-radius: 5px;
+			padding: 25px;
+			transition: 0.5s;
+			font-size: 1vw;
+		}
+
+		.hero-section .hero-bottom-section .booking-section .booking-form .submit:hover {
+			opacity: 0.8;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-section">
+		<nav class="nav-bar">
+			<span class="logo nav-item"><a href="index.html">SCR</a></span>
+			<div id="nav-items" class="nav-items">
+				<span class="nav-item"><a href="about.html">About Us</a></span>
+				<div class="services-dropdown">
+					<span class="nav-item"><a href="services.html">Services</a></span>
+					<div class="dropdown-content">
+						<span class="nav-item"><a href="vehicle.html">Vehicle</a></span>
+						<span class="nav-item"><a href="deals.html">Deals</a></span>
+						<span class="nav-item"><a href="locations.html">Locations</a></span>
+						<span class="nav-item"><a href="insurance.html">Insurance</a></span>
+						<span class="nav-item"><a href="reservation.html">Reservation</a></span>
+					</div>
+				</div>
+				<span class="nav-item"><a href="gallery.html">Project Gallery</a></span>
+				<div class="partner-dropdown">
+					<span class="nav-item"><a href="partner.html">Partner</a></span>
+					<div class="dropdown-content">
+						<span class="nav-item"><a href="testimonial.html">Partner Testimonial</a></span>
+					</div>
+				</div>
+				<span class="nav-item"><a href="contact.html">Contact</a></span>
+				<span class="nav-item"><a href="career.html">Career</a></span>
+				<span class="nav-item"><a href="reference.html">Reference</a></span>
+			</div>
+			<a id="hamburger" href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</nav>
+		
+		
+		<div class="hero-section">
+			<div class="hero-top-section">
+				<div class="title-section">
+					<h1>Sydney Car Rental</h1>
+					<a class="rent-button" href="#" onClick="(() => {alert('Under Construction D:');})()">Rent Now</a>
+				</div>
+			</div>
+			<div class="hero-bottom-section">
+				<div class="booking-section">
+					<form class="booking-form">
+						<div class="branch-container form-container">
+							<label for="branch">Branch</label>
+							<select name="branch" id="branch">
+								<option value="Sydney">Sydney</option>
+								<option value="Melbourne" selected>Melbourne</option>
+								<option value="Brisbane">Brisbane</option>
+								<option value="Canberra">Canberra</option>
+							</select>
+						</div>
+						<div class="line"></div>
+						<div class="date-container form-container">
+							<label for="date">Date</label>
+							<input type="date" required/>
+						</div>
+						<div class="line"></div>
+						<div class="time-container form-container">
+							<label for="time">Time</label>
+							<input type="time" required/>
+						</div>
+						<input class="submit" type="submit" value="Set Appointment" onClick="(() => {confirm('Are you sure?');})()"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer">
+		<div class="social-links">
+			<div class="links">
+				<a href="#"><i class="fa fa-facebook-square" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+				<a href="#"><i class="fa fa-twitter-square" style="color: white;"></i></a>
+			</div>
+		</div>
+		<div class="title">
+			<h1>SCR</h1>
+		</div>
+		<div class="copyright">
+			<span>© <script>document.write(new Date().getFullYear())</script></span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="scripts.js"></script>  
+</body>
+</html>
+
+
+<!--
+*Sources*
+https://unsplash.com/photos/running-black-porsche-sedan-3ZUsNJhi_Ik
+https://unsplash.com/photos/red-ferrari-458-italia-parked-in-front-of-white-wall-eqW1MPinEV4
+https://unsplash.com/photos/blue-chevrolet-coupe-2AovfzYV3rc
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+https://www.w3schools.com/icons/fontawesome_icons_brand.asp
+https://unsplash.com/photos/white-vehicle-with-blue-neon-headlight-bulb--oVaYMgBMbs
+https://unsplash.com/photos/red-bmw-coupe-parked-at-road-zu95jkyrGtw
+https://unsplash.com/photos/red-coupe-during-daytime-1Ah8CAwk3vM
+https://unsplash.com/photos/person-standing-near-the-stairs-MYbhN8KaaEc
+https://unsplash.com/photos/person-pointing-map-uE2T1tCFsn8
+https://unsplash.com/photos/black-car-parked-near-green-trees-during-daytime-zI_R7sUQVF0
+https://unsplash.com/photos/white-and-blue-analog-tachometer-gauge-HUJDz6CJEaM
+https://www.edmunds.com/mazda/6/2020/review/
+https://afx.adfixus.com/afx_prid/2024.5.21.1/auth/pta/?scope=AGxjc2lkPTlERjVFNUU3LTc5MUItNEFDRi05M0I0LTY2MkE0Q0Y5NEI0QSZjYmZuPScnJk5leHRBY3Rpb249UmVkaXJlY3RUb0F1dGhEb21haW4=&afx_csid=5ceef57966b447f2b8bde0663f352cc88dc7ca66813dad5&afx_crid=16545fad4ee740eca6e83cb2418d66848dc7ca66813dae6&afx_rqc=1&ref=aHR0cHM6Ly93d3cuY2Fyc2d1aWRlLmNvbS5hdS9jYXItcmV2aWV3cy90b3lvdGEtZm9ydHVuZXItODA4ODQ=&sv=PridScript_2024.5.21.1
+https://www.carsales.com.au/research/hyundai/accent/2019/
+https://www.google.com/search?q=hilux+2021+au&oq=hilux+2021+au&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB7SAQg1MDM5ajBqMagCALACAA&sourceid=chrome&ie=UTF-8
+https://unsplash.com/photos/man-leaning-on-green-vehicle-qBkSDY7w97c
+https://unsplash.com/photos/a-row-of-parked-cars-in-a-parking-lot-NFz9uZ8CtKM
+https://news.pg.com/multimedia/logos/default.aspx
+https://www.media.volvocars.com/global/en-gb/logos
+https://global.toyota/en/mobility/toyota-brand/features/emblem/
+-->
